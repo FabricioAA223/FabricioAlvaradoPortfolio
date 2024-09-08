@@ -1,0 +1,262 @@
+body {
+    background-color: rgb(30, 30, 30);
+    margin: 30px auto;
+    padding: 0;
+    align-content: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.sidebar {
+    background-color: rgb(40, 40, 40);
+    width: 20%;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.sidebar img {
+    width: 80%;
+    border-radius: 20px;
+    margin: auto;
+}
+
+.container-img {
+    margin: 20px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.container-img h3 {
+    padding: 10px;
+    margin: 0 auto;
+    width: fit-content;
+    border: 1px black solid;
+    font-size: 13px;
+    border-radius: 10px;
+    background-color: rgb(68, 68, 68);
+}
+
+.horizontal-divider {
+    border: 1px solid rgb(68, 68, 68);
+    margin: 30px auto;
+}
+
+.section-name {
+    padding-left: 25px;
+}
+
+.main-container {
+    background-color: rgb(40, 40, 40);
+    width: 60%;
+    border-radius: 15px;
+}
+
+.div-divider {
+    width: 3%;
+}
+
+.flex-div {
+    display: flex;
+}
+.block-div {
+    display: block;
+}
+
+nav{
+    padding-right: 30px;
+    margin-left: auto;
+    background-color: rgb(68, 68, 68);
+    height: 60px;
+    width: 50%;
+    border-radius:  0 15px 0 15px;
+}
+
+nav ul {
+    display: flex;
+    margin: auto;
+    height: 100%;
+    list-style: none;
+    justify-content: space-around  ;
+    align-content: center;
+}
+
+nav ul a{
+    margin: auto;
+    color: white;
+    text-decoration: none;
+}
+
+.padding-div {
+    padding: 0 25px 25px 25px;
+}
+
+#section-name {
+    padding-left: 25px;
+}
+#section-name-animation {
+    width: 200px;
+    border: 3px #CE9C29 solid;
+    border-radius: 0 2px 2px 0;
+}
+
+.contact-data h3{
+    margin: 0 0 10px 0;
+    font-size: 13px;
+    color: gray;
+}
+.contact-data a, .btn-linkedin{
+    margin: 0;
+    color: white;
+    text-decoration: none;
+}
+.contact-data p{
+    margin: 0;
+    color: white;
+}
+.contact-data {
+    margin: auto auto auto 15px;
+}
+
+.contact-icon {
+    min-width: 50px;
+    height: 50px;
+    background-color: rgb(45, 45, 45);
+    display: flex;
+    border-radius: 8px;
+}
+
+.contact-icon img {
+    width: 30px;
+    margin: auto;
+    filter: invert(100%) brightness(200%);
+}
+
+.contact-div {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.btn-linkedin {
+    display: flex;
+    /* background-color: rgb(45, 45, 45); */
+    /* width: fit-content; */
+}
+/* .btn-linkedin p{
+    margin: auto auto auto 0;
+} */
+.btn-linkedin img{
+    padding: 15px;
+    width: 30px;
+    margin: auto;
+    filter: invert(100%) brightness(200%);
+}
+
+#div-about, #div-portfolio, #div-blog, #div-contact { /**/ 
+    display: none;
+}
+
+/* -------------------------Estilos de la vista HOME ----------------------------------- */
+#div-home {
+    display: flex;/*display: none;*/
+    width: 100%;
+}
+.home-data{
+    margin: auto 20px auto auto;
+    width: 650px;
+}
+.home-data h1{
+    font-size: 26px;
+    font-weight: 800;
+    text-align: center;
+    margin: 5px auto;
+}
+.home-data h4{
+    margin: 0 auto;
+    font-weight: 100;
+    font-size: 12px;
+    text-align: left;
+    text-align: justify;
+    color: rgb(151, 151, 151);
+}
+.h4-div {
+    width: 260px;
+    margin: auto;
+}
+.cartoon-img-container {
+    margin: auto;
+    width: 100%;
+}
+.cartoon-img-container img {
+    margin: auto;
+    width: 100%;
+}
+.home-buttons-container {
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+}
+.home-buttons-container a{
+    padding: 8px;
+    font-size: 13px;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-top: 40px;
+    cursor: pointer;
+    /* background-color: rgb(68, 68, 68); */
+    /* color: white; */
+}
+.btn-about-me {
+    background-color: #CE9C29;
+    color: rgb(40, 40, 40);
+}
+.btn-portfolio{
+    border: #CE9C29 1px solid;
+    color: #CE9C29;
+}
+/* --------------------------------------Estilos del About -------------------------------------------- */
+/* #div-about {
+
+} */
+.about-header {
+    margin: 15px 0;
+    font-size: 24px;
+}
+#div-about i {
+    margin: auto 15px auto 0;
+    font-size: 22px;
+    color: #CE9C29;
+}
+#div-about ul {
+    border-left: 1px #CE9C29 solid;
+    list-style: circle;
+    padding-left: 12px;
+    margin-left: 10px;
+}
+#div-about li {
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+.name, .degree, .years, .info {
+    margin: 10px 0;
+}
+.name{
+    font-size: 18px;
+}
+.degree {
+    font-size: 14px;
+    font-weight: 100;
+}
+.years {
+    font-size: 12px;
+    font-weight: 100;
+    color: #CE9C29;
+}
+.info {
+    font-size: 14px;
+    font-weight: 100;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 1px;
+}
