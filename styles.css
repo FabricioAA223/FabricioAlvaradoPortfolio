@@ -226,7 +226,7 @@ nav ul a{
     margin: 15px 0;
     font-size: 24px;
 }
-#div-about i {
+#div-about .flex-div i {
     margin: auto 15px auto 0;
     font-size: 22px;
     color: #CE9C29;
@@ -262,4 +262,55 @@ nav ul a{
     font-weight: 100;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     letter-spacing: 1px;
+}
+.process-var-empty {
+    width: 100%;
+    height: 10px;
+    background-color: rgb(68, 68, 68);
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.process-var {
+    width: 80%;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #CE9C29;
+}
+.skills-container {
+    padding: 0 30px; 
+    border: 1px solid rgb(103, 103, 103);
+    background-color: rgb(55, 55, 55);
+    border-radius: 8px;
+}
+.skill {
+    display: flex;
+    margin: auto;
+}
+.skill h4{
+    margin: 20px 0 10px 0;
+}
+.skill p {
+    margin: 20px auto 10px 15px;
+    color: rgb(151, 151, 151);
+}
+.btn-cv-container {
+    margin: 50px auto 10px auto;
+    display: flex;
+    background-color: #CE9C29;
+    width: fit-content;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-download-cv{
+    margin: auto 0 auto auto;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(40, 40, 40);
+    padding: 10px;
+    font-weight: 700;
+}
+.btn-cv-container .fa-download {
+    color: rgb(40, 40, 40);
+    margin: auto 10px auto 0;
+    font-size: 22px;
 }

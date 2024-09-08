@@ -61,3 +61,16 @@ function navbarOption(e){
             break;
     }
 }
+
+function downloadCV(){
+    // URL del archivo PDF. Asegúrate de que esta URL sea accesible desde el navegador.
+    const url = 'files/CV.pdf';
+
+    // Crear un enlace temporal para descargar el archivo
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'Fabricio Alvarado CV.pdf'; // Nombre con el que se guardará el archivo
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
