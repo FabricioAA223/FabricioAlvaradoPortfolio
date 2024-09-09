@@ -27,15 +27,25 @@ body {
     flex-direction: column;
     text-align: center;
 }
-
-.container-img h3 {
+.major{
+    display: flex;
     padding: 10px;
-    margin: 0 auto;
+    background-color: rgb(68, 68, 68);
     width: fit-content;
     border: 1px black solid;
-    font-size: 13px;
     border-radius: 10px;
-    background-color: rgb(68, 68, 68);
+    margin: auto;
+    justify-content: center;
+    
+}
+.major i {
+    margin: auto;
+    font-size: 15px;
+}
+.container-img h3 {
+    margin: 0;
+    margin-left: 10px;
+    font-size: 13px;
 }
 
 .horizontal-divider {
@@ -68,16 +78,17 @@ body {
 }
 
 nav{
-    padding-right: 30px;
+    padding-right: 0px;
     margin-left: auto;
     background-color: rgb(68, 68, 68);
     height: 60px;
-    width: 50%;
+    width: 60%;
     border-radius:  0 15px 0 15px;
 }
 
 nav ul {
     display: flex;
+    padding: 0;
     margin: auto;
     height: 100%;
     list-style: none;
@@ -116,6 +127,7 @@ nav ul a{
 }
 .contact-data p{
     margin: 0;
+    font-size: 13px;
     color: white;
 }
 .contact-data {
@@ -127,17 +139,17 @@ nav ul a{
 }
 
 .contact-icon {
-    min-width: 50px;
+    min-width: 40px;
     height: 50px;
     background-color: rgb(45, 45, 45);
     display: flex;
     border-radius: 8px;
 }
 
-.contact-icon img {
-    width: 30px;
+.contact-icon i {
+    font-size: 25px;
     margin: auto;
-    filter: invert(100%) brightness(200%);
+    color: #CE9C29;
 }
 
 .contact-div {
@@ -147,17 +159,14 @@ nav ul a{
 
 .btn-linkedin {
     display: flex;
-    /* background-color: rgb(45, 45, 45); */
-    /* width: fit-content; */
+    margin-top: 30px;
 }
-/* .btn-linkedin p{
-    margin: auto auto auto 0;
-} */
-.btn-linkedin img{
-    padding: 15px;
-    width: 30px;
+
+.btn-linkedin i{
     margin: auto;
-    filter: invert(100%) brightness(200%);
+    font-size: 25px;
+    margin: auto;
+    color: #CE9C29;
 }
 
 #div-about, #div-portfolio, #div-blog, #div-contact { 
@@ -235,7 +244,7 @@ nav ul a{
     margin: 15px 0;
     font-size: 24px;
 }
-#div-about .flex-div i {
+#div-about .flex-div i, #div-contact .flex-div i {
     margin: auto 15px auto 0;
     font-size: 22px;
     color: #CE9C29;
@@ -323,10 +332,66 @@ nav ul a{
     margin: auto 10px auto 0;
     font-size: 22px;
 }
+#map {
+    height: 400px;
+    width: 100%;
+}
+input{
+    background-color: rgb(68, 68, 68);
+    border-radius: 8px;
+    height: 40px;
+    width: 48%;
+    font-size: 18px;
+    color: white;
+    margin: auto;
+}
+.input-name{
+    margin: auto auto 25px 0;
+}
+.input-email{
+    margin: auto 0 25px auto;
+}
+textarea {
+    background-color: rgb(68, 68, 68);
+    border-radius: 5px;
+    height: fit-content;
+    font-size: 18px;
+    color: white;
+    margin-bottom: 20px;
+}
+.btn-submit{
+    background-color: rgb(40, 40, 40);
+    padding: 8px 15px;
+    display: flex;
+    border-radius: 8px;
+    color: rgb(151, 151, 151);
+    border: 1px solid rgb(151, 151, 151);
+    cursor: pointer;
+}
+.btn-submit i {
+    font-size: 20px;
+    margin: auto 10px auto auto;
+}
+.btn-submit p{
+    font-size: 15px;
+    font-weight: 600;
+    margin: auto;
+}
+.submit-btn-div{
+    display: flex;
+    justify-content: end;
+}
+
+.contact-form-header {
+    margin-top: 10px;
+}
 
 @media (max-width: 950px) {
     .flex-div-mobile {
         flex-direction: column;
+    }
+    #map {
+        height: 300px;
     }
     .sidebar {
         padding: 0;
@@ -351,12 +416,11 @@ nav ul a{
         margin-left: 20px;
         margin-right: 20px;
     }
-    .contact-div img {
-        max-width: 50px;
+    .contact-div i {
+        font-size: 20px;
     }
     .btn-linkedin {
-        margin: auto;
-        max-width: 100px;
+        margin: 20px auto;
     }
     nav{
         margin: auto auto 30px auto;
@@ -367,7 +431,7 @@ nav ul a{
     nav ul {
         margin: auto;
         padding: 0;
-        justify-content: space-around  ;
+        justify-content: space-around ;
         align-content: center;
     }
     nav ul a{

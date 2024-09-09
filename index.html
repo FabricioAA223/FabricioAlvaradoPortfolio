@@ -12,40 +12,42 @@
         <div class="container-img">
             <img src="./assets/FotoCV.jpeg"/>
             <h2>Fabricio Alvarado</h2>
-            <h3>Software Engineer</h3>
+            <div class="major">
+                <i class="fa-solid fa-laptop-code"></i>
+                <h3>Software Engineer</h3>
+            </div>
         </div>
         <div class="horizontal-divider"></div>
         <div class="contact-div">
             <div class="contact-icon">
-                <img src="./assets/mail.png" alt="mail-icon">
+                <i class="fa-solid fa-envelope"></i>
             </div>
             <div class="contact-data">
                 <h3>EMAIL</h3>
-                <a href="fabricioalvarado223@gmail.com"><p>fabricioalvarado223@gmail.com</p></a>
+                <a href="mailto:fabricioalvarado223@gmail.com"><p>fabricioalvarado223@gmail.com</p></a>
             </div>
         </div>
         <div class="contact-div">
             <div class="contact-icon">
-                <img src="./assets/phone.png" alt="phone-icon">
+                <i class="fa-solid fa-mobile-screen-button"></i>
             </div>
             <div class="contact-data">
                 <h3>PHONE</h3>
-                <p>+506 8452 7729</p>
+                <a href="tel:+50684527729"><p>+506 8452 7729</p></a>
             </div>
         </div>
         <div class="contact-div">
             <div class="contact-icon">
-                <img src="./assets/ubication.png" alt="ubication-mark-icon">
+                <i class="fa-solid fa-location-dot"></i>
             </div>
             <div class="contact-data">
                 <h3>LOCATION</h3>
-                <p>Costa Rica</p>
+                <a onclick="navbarOption(event)" href="#main-container"><p>Costa Rica</p></a>
             </div>
         </div>
 
             <a class="btn-linkedin" href="www.linkedin.com/in/f-alvarado">
-                <img src="./assets/linkedin.png" alt="linkedin-icon">
-                <!-- <p>LINKEDIN</p> -->
+                <i class="fa-brands fa-linkedin"></i>
             </a>
     </div>
 
@@ -212,13 +214,45 @@
             <div id="div-blog">
                 <p>Este es texto de informacion del blog</p>
             </div>
+
             <div id="div-contact">
-                <p>Este es texto de informacion de contacto</p>
+                <div class="flex-div">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <h1 class="about-header">My Approximate Location</h1>
+                </div>
+                <div id="map"></div>
+
+                <div class="flex-div contact-form-header">
+                    <i class="fa-regular fa-paper-plane"></i>
+                    <h1 class="about-header">Contact Form</h1>
+                </div>
+                <form id="contact-form">
+                    <div class="flex-div">
+                        <input class="input-name" type="text" name="from_name" placeholder="Full name" required>
+                        <input class="input-email" type="email" name="from_email" placeholder="Email address" required>
+                    </div>
+                    <div class="flex-div" style="flex-direction: column;">
+                        <!-- <label for="message">Mensaje:</label> -->
+                        <textarea name="message" rows="5" placeholder="Your message" required></textarea> 
+                    </div>
+                    <div class="submit-btn-div">
+                        <button class="btn-submit" type="submit">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <p>Send message</p>
+                        </button>
+                    </div>
+                </form>
             </div>
+
         </div>
 
     </div>
 
     <script src="script.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAAh-Rp5BrBoJxLeJIgOm5ghPBr6xEzxo&callback=initMap">
+    </script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAAh-Rp5BrBoJxLeJIgOm5ghPBr6xEzxo"></script> -->
 </body>
 </html>
