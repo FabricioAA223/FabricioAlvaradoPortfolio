@@ -60,6 +60,9 @@ body {
 .flex-div {
     display: flex;
 }
+.flex-div-mobile {
+    display: flex;
+}
 .block-div {
     display: block;
 }
@@ -117,6 +120,10 @@ nav ul a{
 }
 .contact-data {
     margin: auto auto auto 15px;
+    width: fit-content;
+}
+.contact-data a {
+    word-break: break-all;
 }
 
 .contact-icon {
@@ -135,7 +142,7 @@ nav ul a{
 
 .contact-div {
     display: flex;
-    margin-bottom: 40px;
+    margin-top: 40px;
 }
 
 .btn-linkedin {
@@ -153,7 +160,7 @@ nav ul a{
     filter: invert(100%) brightness(200%);
 }
 
-#div-about, #div-portfolio, #div-blog, #div-contact { /**/ 
+#div-about, #div-portfolio, #div-blog, #div-contact { 
     display: none;
 }
 #navbar-home {
@@ -205,7 +212,7 @@ nav ul a{
     font-size: 13px;
     border-radius: 5px;
     font-weight: 600;
-    margin-top: 40px;
+    margin: 40px auto 0 auto;
     cursor: pointer;
     /* background-color: rgb(68, 68, 68); */
     /* color: white; */
@@ -213,10 +220,12 @@ nav ul a{
 .btn-about-me {
     background-color: #CE9C29;
     color: rgb(40, 40, 40);
+    text-align: center;
 }
 .btn-portfolio{
     border: #CE9C29 1px solid;
     color: #CE9C29;
+    text-align: center;
 }
 /* --------------------------------------Estilos del About -------------------------------------------- */
 /* #div-about {
@@ -314,3 +323,63 @@ nav ul a{
     margin: auto 10px auto 0;
     font-size: 22px;
 }
+
+@media (max-width: 950px) {
+    .flex-div-mobile {
+        flex-direction: column;
+    }
+    .sidebar {
+        padding: 0;
+        width: 90%;
+        max-width: 500px;
+        margin: auto auto 20px auto;
+    }
+    .sidebar img {
+        width: 50%;
+    }
+    .main-container{
+        width: 90%;
+        max-width: 700px;
+        padding: 0;
+        margin: auto;
+    }
+    .div-divider{
+        display: none;
+    }
+    .contact-div {
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .contact-div img {
+        max-width: 50px;
+    }
+    .btn-linkedin {
+        margin: auto;
+        max-width: 100px;
+    }
+    nav{
+        margin: auto auto 30px auto;
+        padding: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+    nav ul {
+        margin: auto;
+        padding: 0;
+        justify-content: space-around  ;
+        align-content: center;
+    }
+    nav ul a{
+        margin: auto;
+    }
+    .cartoon-img-container {
+        display: none;
+    }
+    .div-home, .home-data {
+        margin: auto;
+    }
+    .padding-div{
+        padding: 0 10px 20px 10px;
+    }
+  }
