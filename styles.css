@@ -169,8 +169,11 @@ nav ul a{
     color: #CE9C29;
 }
 
-#div-about, #div-portfolio, #div-blog, #div-contact { 
+#div-about,  #div-blog, #div-contact { /*#div-portfolio,*/
     display: none;
+}
+#div-portfolio{
+    display: flex;
 }
 #navbar-home {
     color: #CE9C29;
@@ -178,7 +181,7 @@ nav ul a{
 
 /* -------------------------Estilos de la vista HOME ----------------------------------- */
 #div-home {
-    display: flex;/*display: none;*/
+    display: none;/*display: flex;*/
     width: 100%;
 }
 .home-data{
@@ -332,6 +335,131 @@ nav ul a{
     margin: auto 10px auto 0;
     font-size: 22px;
 }
+/* --------------------------------------Estilos para el portfolio ------------------------------------ */
+#div-portfolio {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en varias filas si es necesario */
+    gap: 10px; /* Espacio entre tarjetas */
+    justify-content: space-evenly; /* Centra las tarjetas horizontalmente */
+}
+/* ---------Animacion para el volteo de la card -------------- */
+.card-inner {
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+.card-front, .card-back {
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.card-back {
+    transform: rotateY(180deg);
+    padding: 10px;
+    overflow-y: auto;
+    height: 200px;
+}
+/* Personaliza el scroll para el overflow */
+.card-back::-webkit-scrollbar {
+    width: 12px;
+}
+.card-back::-webkit-scrollbar-thumb {
+    background-color: rgb(103, 103, 103);
+    border-radius: 6px;
+}
+.card-back::-webkit-scrollbar-track {
+    background-color: rgb(30, 30, 30);
+    border-radius: 6px; 
+}
+.card-inner.flipped {
+    transform: rotateY(180deg);
+}
+/* ------------------------------------------------------------ */
+.card-back h3, .card-back h4, .card-back p, .card-back h2 {
+    padding: 0;
+    margin: 0;
+}
+.card-back h2 {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 3px;
+}
+.card-back p{
+    font-size: 12px;
+    margin-bottom: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: justify;
+    color: rgb(151, 151, 151);
+}
+.card-back h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.card-back h4 {
+    font-size: 12px;
+    font-weight: 100;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(151, 151, 151);
+}
+.github-button {
+    margin: 10px auto auto auto;
+    padding: 8px 10px;
+    background-color: rgb(40, 40, 40);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.github-button i {
+    font-size: 18px;
+}
+.github-button:hover {
+    background-color: rgb(45, 45, 45);
+
+}
+.project-card{
+    width: 240px;
+    height: 220px; 
+    margin: 20px 0;
+    cursor: pointer;
+    perspective: 1000px;
+    border-radius: 8px;
+    background-color: rgb(45, 45, 45);
+
+}
+.project-card:hover{
+    background-color: rgb(50, 50, 50);
+}
+.project-card .card-front h2{
+    margin: 10px auto 5px 10px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.project-card .card-front h3{
+    margin: 0 0 10px 10px;
+    font-size: 14px;
+    font-weight: 200;
+    color: rgb(151, 151, 151);
+}
+.card-img-container{
+    width: 100%;
+    margin: auto;
+    display: flex;
+}
+.card-img-container img{
+    width: 100%;
+    aspect-ratio: 3/2;
+    margin: auto;
+    border-radius: 8px;
+}
+
+/* --------------------------------------- Estilos para el blog ------------------------------------ */
+
+
+/* ------------------------------Estilos del contact ------------------------------------------------- */
 #map {
     height: 400px;
     width: 100%;
@@ -381,11 +509,11 @@ textarea {
     display: flex;
     justify-content: end;
 }
-
 .contact-form-header {
     margin-top: 10px;
 }
 
+/* ----------------------------------------------- Estilos para el responsive ---------------------------------------- */
 @media (max-width: 950px) {
     .flex-div-mobile {
         flex-direction: column;
@@ -445,5 +573,10 @@ textarea {
     }
     .padding-div{
         padding: 0 10px 20px 10px;
+    }
+
+    .project-card{
+        width: 350px;
+        height: 280px;
     }
   }

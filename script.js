@@ -40,12 +40,12 @@ function navbarOption(e){
             break;
         case 'See my Portfolio':
         case 'Portfolio':
-            document.getElementById('div-portfolio').style.display = "block";
+            document.getElementById('div-portfolio').style.display = "flex";
             document.getElementById('section-name').innerHTML = "My Portfolio";
             document.getElementById('navbar-portfolio').style.color = '#CE9C29';
             break;
         case 'Blog':
-            document.getElementById('div-blog').style.display = "block";
+            document.getElementById('div-blog').style.display = "flex";
             document.getElementById('section-name').innerHTML = "My Blog";
             document.getElementById('navbar-blog').style.color = '#CE9C29';
             break;
@@ -78,7 +78,6 @@ function downloadCV(){
     document.body.removeChild(a);
 }
 
-//AIzaSyCAAh-Rp5BrBoJxLeJIgOm5ghPBr6xEzxo
 // Función para inicializar el mapa
 function initMap() {
     // Estilo oscuro personalizado
@@ -102,12 +101,11 @@ function initMap() {
             elementType: 'geometry.fill',
             stylers: [{ color: '#2c2c2c' }]
         },
-        // Agrega más personalización aquí según sea necesario
     ];
 
     // Opciones del mapa
     const mapOptions = {
-        center: { lat: 9.994525269355865, lng: -85.25287212907321 }, // Ubicación de ejemplo (San Francisco)
+        center: { lat: 9.926285066678863, lng: -84.09310538964152 }, // Ubicación de ejemplo (San Francisco)
         zoom: 12,
         styles: darkModeStyle // Aplica el estilo oscuro
     };
@@ -115,12 +113,22 @@ function initMap() {
     // Crea el mapa en el elemento con id "map"
     const map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
+    // Crea un marcador en la ubicación especificada
     const marker = new google.maps.Marker({
-        position: { lat:  9.994525269355865, lng: -85.25287212907321 }, // Ubicación del marcador
+        position: { lat: 9.926285066678863, lng: -84.09310538964152 }, // Ubicación del marcador
         map: map,  // El mapa donde se colocará el marcador
-        title: 'My Approximate Location'  // Texto que aparece al pasar sobre el marcador
+        title: 'Aquí está tu marcador!'  // Texto que aparece al pasar sobre el marcador
     });
 }
+
+const originalConsoleWarn = console.warn;
+
+console.warn = function (message) {
+    if (message.includes('google.maps.Marker is deprecated')) {
+        return; // Ignora el warning específico
+    }
+    originalConsoleWarn.apply(console, arguments); // Mantén los otros warnings
+};
 
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevenir que la página se recargue
@@ -144,3 +152,8 @@ document.getElementById('contact-form').addEventListener('submit', function(even
             console.log("Error al enviar la respuesta automática: " + JSON.stringify(error));
         });
 });
+
+function toggleCard(card) {
+    const cardInner = card.querySelector('.card-inner');
+    cardInner.classList.toggle('flipped');
+}
