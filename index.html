@@ -18,37 +18,42 @@
             </div>
         </div>
         <div class="horizontal-divider"></div>
-        <div class="contact-div">
-            <div class="contact-icon">
-                <i class="fa-solid fa-envelope"></i>
+        <a class="contact-data" href="mailto:fabricioalvarado223@gmail.com">
+            <div class="contact-div">
+                <div class="contact-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                    <div class="contact-data">
+                        <h3>EMAIL</h3>
+                        <p>fabricioalvarado223@gmail.com</p>
+                    </div>
             </div>
-            <div class="contact-data">
-                <h3>EMAIL</h3>
-                <a href="mailto:fabricioalvarado223@gmail.com"><p>fabricioalvarado223@gmail.com</p></a>
+        </a>
+        <a class="contact-data" href="tel:+50684527729">
+            <div class="contact-div">
+                <div class="contact-icon">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                </div>
+                <div class="contact-data">
+                    <h3>PHONE</h3>
+                    <p>+506 8452 7729</p>
+                </div>
             </div>
-        </div>
-        <div class="contact-div">
-            <div class="contact-icon">
-                <i class="fa-solid fa-mobile-screen-button"></i>
+        </a>
+        <a class="contact-data" onclick="navbarOption(event, 'navbar-contact')">
+            <div class="contact-div">
+                <div class="contact-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="contact-data">
+                    <h3>LOCATION</h3>
+                    <p>Costa Rica</p>
+                </div>
             </div>
-            <div class="contact-data">
-                <h3>PHONE</h3>
-                <a href="tel:+50684527729"><p>+506 8452 7729</p></a>
-            </div>
-        </div>
-        <div class="contact-div">
-            <div class="contact-icon">
-                <i class="fa-solid fa-location-dot"></i>
-            </div>
-            <div class="contact-data">
-                <h3>LOCATION</h3>
-                <a onclick="navbarOption(event)" href="#main-container"><p>Costa Rica</p></a>
-            </div>
-        </div>
-
-            <a class="btn-linkedin" href="www.linkedin.com/in/f-alvarado">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
+        </a>
+        <a class="btn-linkedin" href="www.linkedin.com/in/f-alvarado">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
     </div>
 
     <div class="div-divider"></div>
@@ -60,11 +65,11 @@
             </div>
             <nav>
                 <ul id="navbar-ul">
-                    <a onclick="navbarOption(event)" href="#main-container"><li id="navbar-home">Home</li></a>
-                    <a onclick="navbarOption(event)" href="#main-container"><li id="navbar-about">About</li></a>
-                    <a onclick="navbarOption(event)" href="#main-container"><li id="navbar-portfolio">Portfolio</li></a>
-                    <a onclick="navbarOption(event)" href="#main-container"><li id="navbar-blog">Blog</li></a>
-                    <a onclick="navbarOption(event)" href="#main-container"><li id="navbar-contact">Contact</li></a>
+                    <li id="navbar-home" class="active"><a href="#home" onclick="navbarOption(event)">Home</a><div class="underline"></div></li>
+                    <li id="navbar-about"><a href="#about" onclick="navbarOption(event)">About</a><div class="underline"></div></li>
+                    <li id="navbar-portfolio"><a href="#portfolio" onclick="navbarOption(event)">Portfolio</a><div class="underline"></div></li>
+                    <li id="navbar-blog"><a href="#blog" onclick="navbarOption(event)">Blog</a><div class="underline"></div></li>
+                    <li id="navbar-contact"><a href="#contact" onclick="navbarOption(event)">Contact</a><div class="underline"></div></li>
                 </ul>
             </nav>
         </div>
@@ -79,8 +84,8 @@
                         </h4> 
                     </div>
                     <div class="home-buttons-container">
-                        <a onclick="navbarOption(event)" class="btn-about-me">Learn more about me</a>
-                        <a onclick="navbarOption(event)" class="btn-portfolio">See my Portfolio</a>
+                        <a onclick="navbarOption(event, 'navbar-about')" class="btn-about-me">Learn more about me</a>
+                        <a onclick="navbarOption(event, 'navbar-portfolio')" class="btn-portfolio">See my Portfolio</a>
                     </div>
                 </div>
                 <div class="cartoon-img-container">
@@ -203,6 +208,13 @@
                         <div class="process-var" style="width: 100%;"></div>
                     </div>
                 </div>
+                <div class="flex-div">
+                    <i class="fa-regular fa-file"></i>
+                    <h1 class="about-header">My Resume</h1>
+                </div>
+                <object data="./files/CV.pdf" type="application/pdf" class="pdf-viewer">
+                    <p>Your browser does not support PDFs. Please use the button below to download the PDF.</p>
+                </object>
                 <div class="btn-cv-container" onclick="downloadCV()">
                     <p class="btn-download-cv">Download CV</p>
                     <i class="fa-solid fa-download"></i>
@@ -229,7 +241,7 @@
                             <h4>
                                 React, CSS, MUI, JavaScript, Firebase
                             </h4>
-                            <a href="https://github.com/yourgithubrepo" target="_blank" class="github-button">
+                            <a href="https://github.com/FabricioAA223/chat_analyzer.git" target="_blank" class="github-button">
                                 <i class="fa-brands fa-github"></i>
                                 Code
                             </a>
@@ -281,7 +293,7 @@
                             <h4>
                                 React, CSS, JavaScript, MUI, Node.js, Express, SQLServer
                             </h4>
-                            <a href="https://github.com/yourgithubrepo" target="_blank" class="github-button">
+                            <a href="https://github.com/FabricioAA223/SoftwareDesignProject.git" target="_blank" class="github-button">
                                 <i class="fa-brands fa-github"></i>
                                 Code
                             </a>
@@ -309,10 +321,17 @@
                             <h4>
                                 React Native, CSS, JavaScript, Firebase
                             </h4>
-                            <a href="https://github.com/yourgithubrepo" target="_blank" class="github-button">
-                                <i class="fa-brands fa-github"></i>
-                                Code
-                            </a>
+                            <div class="flex-div">
+                                <a href="https://github.com/FabricioAA223/SemanaCulturalUser.git" target="_blank" class="github-button">
+                                    <i class="fa-brands fa-github"></i>
+                                    User
+                                </a>
+                                <a href="https://github.com/FabricioAA223/SemanaCulturalAdmin.git" target="_blank" class="github-button">
+                                    <i class="fa-brands fa-github"></i>
+                                    Admin
+                                </a>                                
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -336,7 +355,7 @@
                             <h4>
                                 React, CSS, JavaScript, Firebase
                             </h4>
-                            <a href="https://github.com/yourgithubrepo" target="_blank" class="github-button">
+                            <a href="https://github.com/FabSDevX/G-Nails.git" target="_blank" class="github-button">
                                 <i class="fa-brands fa-github"></i>
                                 Code
                             </a>
@@ -364,7 +383,7 @@
                             <h4>
                                 HTML, CSS, JavaScript, Python Flask, Google Cloud, Raspbian
                             </h4>
-                            <a href="https://github.com/yourgithubrepo" target="_blank" class="github-button">
+                            <a href="https://github.com/FabricioAA223/datasetCreator.git" target="_blank" class="github-button">
                                 <i class="fa-brands fa-github"></i>
                                 Code
                             </a>

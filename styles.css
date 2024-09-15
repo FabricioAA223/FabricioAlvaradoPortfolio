@@ -11,12 +11,16 @@ body {
 .sidebar {
     background-color: rgb(40, 40, 40);
     width: 20%;
+    margin:0;
     border-radius: 15px;
-    padding: 25px;
+    padding: 5px 25px;
+    height: 95vh; /* Para hacer que el sidebar tenga la altura de la ventana */
+    position: sticky; /* Se pega cuando se scrollea */
+    top: 0; /* Para que se mantenga fijo en la parte superior */
 }
 
 .sidebar img {
-    width: 80%;
+    width: 60%;
     border-radius: 20px;
     margin: auto;
 }
@@ -47,10 +51,13 @@ body {
     margin-left: 10px;
     font-size: 13px;
 }
+.container-img h2 {
+    margin: 20px 0;
+}
 
 .horizontal-divider {
     border: 1px solid rgb(68, 68, 68);
-    margin: 30px auto;
+    margin: 20px auto;
 }
 
 .section-name {
@@ -95,11 +102,28 @@ nav ul {
     justify-content: space-around  ;
     align-content: center;
 }
-
-nav ul a{
-    margin: auto;
+nav ul li{
+    margin: auto 0;
+}
+nav ul li a{
     color: white;
     text-decoration: none;
+    font-size: 16px;
+    transition: font-size 0.3s ease;
+    cursor: pointer;
+}
+nav ul li.active a{
+    font-size: 20px; /* Tamaño aumentado al hacer clic */
+    color: #CE9C29;
+}
+.underline {
+    background-color: #CE9C29;
+    width: 0;
+    height: 3px;
+    transition: width 0.3s ease;
+}
+ul li.active .underline {
+    width: 100%;
 }
 
 .padding-div {
@@ -134,8 +158,13 @@ nav ul a{
     margin: auto auto auto 15px;
     width: fit-content;
 }
-.contact-data a {
+.contact-data p {
     word-break: break-all;
+}
+a.contact-data {
+    text-decoration: none;
+    color: inherit;
+    margin: auto auto auto 0;
 }
 
 .contact-icon {
@@ -154,7 +183,7 @@ nav ul a{
 
 .contact-div {
     display: flex;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .btn-linkedin {
@@ -174,9 +203,6 @@ nav ul a{
 }
 #div-portfolio{
     display: flex;
-}
-#navbar-home {
-    color: #CE9C29;
 }
 
 /* -------------------------Estilos de la vista HOME ----------------------------------- */
@@ -226,8 +252,6 @@ nav ul a{
     font-weight: 600;
     margin: 40px auto 0 auto;
     cursor: pointer;
-    /* background-color: rgb(68, 68, 68); */
-    /* color: white; */
 }
 .btn-about-me {
     background-color: #CE9C29;
@@ -302,6 +326,7 @@ nav ul a{
     border: 1px solid rgb(103, 103, 103);
     background-color: rgb(55, 55, 55);
     border-radius: 8px;
+    margin: 10px auto 20px auto;
 }
 .skill {
     display: flex;
@@ -315,7 +340,7 @@ nav ul a{
     color: rgb(151, 151, 151);
 }
 .btn-cv-container {
-    margin: 50px auto 10px auto;
+    margin: 30px auto 10px auto;
     display: flex;
     background-color: #CE9C29;
     width: fit-content;
@@ -334,6 +359,12 @@ nav ul a{
     color: rgb(40, 40, 40);
     margin: auto 10px auto 0;
     font-size: 22px;
+}
+.pdf-viewer {
+    margin-top: 10px;
+    width: 100%;
+    height: 600px;
+    border-radius: 8px;
 }
 /* --------------------------------------Estilos para el portfolio ------------------------------------ */
 #div-portfolio {
@@ -426,7 +457,6 @@ nav ul a{
     perspective: 1000px;
     border-radius: 8px;
     background-color: rgb(45, 45, 45);
-
 }
 .project-card:hover{
     background-color: rgb(50, 50, 50);
