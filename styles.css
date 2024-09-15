@@ -313,6 +313,21 @@ a.contact-data {
     border-radius: 5px;
     background-color: #CE9C29;
 }
+.width-100{
+    width: 100%;
+}
+.width-85{
+    width: 85%;
+}
+.width-80{
+    width: 80%;
+}
+.width-70{
+    width: 70%;
+}
+.width-60{
+    width: 60%;
+}
 .skills-container {
     padding: 0 30px; 
     border: 1px solid rgb(103, 103, 103);
@@ -584,6 +599,10 @@ textarea {
 }
 .contact-form-header {
     margin-top: 10px;
+}
+.message-div{
+    display: flex;
+    flex-direction: column;
 }
 
 /* ----Para que al inicio todo esté oculto excepto el home---- */
