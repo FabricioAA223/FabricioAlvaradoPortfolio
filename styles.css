@@ -14,13 +14,13 @@ body {
     margin:0;
     border-radius: 15px;
     padding: 5px 25px;
-    height: 95vh; /* Para hacer que el sidebar tenga la altura de la ventana */
+    height: 90vh; /*Para hacer que el sidebar tenga la altura de la ventana*/
     position: sticky; /* Se pega cuando se scrollea */
-    top: 0; /* Para que se mantenga fijo en la parte superior */
+    top: 30px; /* Para que se mantenga fijo en la parte superior */
 }
 
 .sidebar img {
-    width: 60%;
+    width: 180px;
     border-radius: 20px;
     margin: auto;
 }
@@ -165,6 +165,7 @@ a.contact-data {
     text-decoration: none;
     color: inherit;
     margin: auto auto auto 0;
+    cursor: pointer;
 }
 
 .contact-icon {
@@ -188,7 +189,8 @@ a.contact-data {
 
 .btn-linkedin {
     display: flex;
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .btn-linkedin i{
@@ -198,16 +200,9 @@ a.contact-data {
     color: #CE9C29;
 }
 
-#div-about,  #div-blog, #div-contact { /*#div-portfolio,*/
-    display: none;
-}
-#div-portfolio{
-    display: flex;
-}
-
 /* -------------------------Estilos de la vista HOME ----------------------------------- */
 #div-home {
-    display: none;/*display: flex;*/
+    display: flex;
     width: 100%;
 }
 .home-data{
@@ -264,9 +259,6 @@ a.contact-data {
     text-align: center;
 }
 /* --------------------------------------Estilos del About -------------------------------------------- */
-/* #div-about {
-
-} */
 .about-header {
     margin: 15px 0;
     font-size: 24px;
@@ -371,7 +363,7 @@ a.contact-data {
     width: 100%;
     display: flex;
     flex-wrap: wrap; /* Permite que las tarjetas se ajusten en varias filas si es necesario */
-    gap: 10px; /* Espacio entre tarjetas */
+    gap: 10px;       /* Espacio entre tarjetas */
     justify-content: space-evenly; /* Centra las tarjetas horizontalmente */
 }
 /* ---------Animacion para el volteo de la card -------------- */
@@ -447,7 +439,6 @@ a.contact-data {
 }
 .github-button:hover {
     background-color: rgb(45, 45, 45);
-
 }
 .project-card{
     width: 240px;
@@ -457,6 +448,8 @@ a.contact-data {
     perspective: 1000px;
     border-radius: 8px;
     background-color: rgb(45, 45, 45);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
 }
 .project-card:hover{
     background-color: rgb(50, 50, 50);
@@ -487,6 +480,56 @@ a.contact-data {
 }
 
 /* --------------------------------------- Estilos para el blog ------------------------------------ */
+#div-blog {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en varias filas si es necesario */
+    gap: 10px; /* Espacio entre tarjetas */
+    justify-content: space-evenly; /* Centra las tarjetas horizontalmente */
+}
+.blog-card {
+    width: 270px;
+    margin: 20px 0;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: rgb(45, 45, 45);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.blog-card:hover{
+    background-color: rgb(50, 50, 50);
+}
+.blog-image {
+    width: 100%;
+    object-fit: cover;
+}
+.blog-content {
+    padding: 15px;
+}
+.blog-content h2 {
+    margin: 0;
+    text-align: center;
+    font-size: 1.5em;
+}
+.blog-content p {
+    margin-top: 10px;
+    text-align: justify;
+    font-size: 1em;
+    color: #666;
+}
+.read-more {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    margin: 15px auto 5px auto;
+    padding: 10px 15px;
+    background-color: rgb(40, 40, 40);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.read-more:hover {
+    background-color: rgb(45, 45, 45);
+}
 
 
 /* ------------------------------Estilos del contact ------------------------------------------------- */
@@ -543,6 +586,10 @@ textarea {
     margin-top: 10px;
 }
 
+/* ----Para que al inicio todo esté oculto excepto el home---- */
+#div-about, #div-portfolio, #div-blog, #div-contact {
+    display: none;
+}
 /* ----------------------------------------------- Estilos para el responsive ---------------------------------------- */
 @media (max-width: 950px) {
     .flex-div-mobile {
@@ -553,6 +600,8 @@ textarea {
     }
     .sidebar {
         padding: 0;
+        position: inherit;
+        height: fit-content;
         width: 90%;
         max-width: 500px;
         margin: auto auto 20px auto;
@@ -608,5 +657,8 @@ textarea {
     .project-card{
         width: 350px;
         height: 280px;
+    }
+    .blog-card{
+        width: 350px;
     }
   }
