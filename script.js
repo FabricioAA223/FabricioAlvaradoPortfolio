@@ -7,13 +7,11 @@ function navbarOption(e, idTarget){ //Si el elemento clickeado no es un li del n
         target = document.getElementById(idTarget);
     else
         target = e.currentTarget.closest('li');
-    console.log(target)
     if (target) {
         target.classList.add('active');
     }
     
     const navbarOptionSelected = e.target.textContent
-    console.log(navbarOptionSelected)
     const animationElement = document.getElementById('section-name-animation');
 
     animationElement.style.width = "0px";       // Establecer el ancho inicial
@@ -68,7 +66,6 @@ function navbarOption(e, idTarget){ //Si el elemento clickeado no es un li del n
 }
 
 function downloadCV(){
-    // URL del archivo PDF. Asegúrate de que esta URL sea accesible desde el navegador.
     const url = 'files/CV.pdf';
 
     // Crear un enlace temporal para descargar el archivo
@@ -127,18 +124,18 @@ const originalConsoleWarn = console.warn;
 
 console.warn = function (message) {
     if (message.includes('google.maps.Marker is deprecated')) {
-        return; // Ignora el warning específico
+        return; // Ignorar el warning que muestra la key en consola (No se pudo resolver)
     }
-    originalConsoleWarn.apply(console, arguments); // Mantén los otros warnings
+    originalConsoleWarn.apply(console, arguments); // Mantener los otros warnings
 };
 
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevenir que la página se recargue
     const serviceID = 'service_cvxpuuo';
     const templateID = 'template_fga8ngg';
-    const userTemplateID = 'template_gdsiduo'; // ID de la plantilla de respuesta automática
+    const userTemplateID = 'template_gdsiduo'; 
     
-    // Enviar el formulario a tu correo
+    // Enviar el formulario a mi correo
     emailjs.sendForm(serviceID, templateID, this)
     .then(function() {
         alert("Your message has been sent successfully!");
